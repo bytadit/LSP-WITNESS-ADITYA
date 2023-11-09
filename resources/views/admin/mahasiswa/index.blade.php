@@ -95,7 +95,7 @@
                     "order": [[ 1, 'desc' ]],
                     // define attribute untuk menonaktifkan pencarian untuk kolom selain kolom NIM
                     "columnDefs": [
-                        { "targets": [1,3,4,5], "searchable": false }
+                        { "targets": [1,3,4,5,6], "searchable": false }
                     ],
                     "language": {
                         searchPlaceholder: "Cari Nama"
