@@ -88,10 +88,18 @@
             $(function () {
                 $("#tableMhs").DataTable({
                     "responsive": true,
+                    "ordering": true,
                     "lengthChange": true,
                     "autoWidth": true,
                     // define attribute untuk mengurutkan table berdasarkan kolom ke 2 (nim) secara descending
-                    "order": [[ 1, 'desc' ]]
+                    "order": [[ 1, 'desc' ]],
+                    // define attribute untuk menonaktifkan pencarian untuk kolom selain kolom NIM
+                    "columnDefs": [
+                        { "targets": [1,3,4,5], "searchable": false }
+                    ],
+                    "language": {
+                        searchPlaceholder: "Cari Nama"
+                    }
                 }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
             });
         </script>
